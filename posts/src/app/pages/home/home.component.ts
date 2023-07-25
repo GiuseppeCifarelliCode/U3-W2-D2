@@ -8,6 +8,7 @@ import { PostService } from 'src/app/post.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  posts:Post[] = this.getPosts()
   constructor( private postSvc:PostService){}
 
   getPosts():Post[]{

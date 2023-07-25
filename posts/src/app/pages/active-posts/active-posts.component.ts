@@ -8,10 +8,11 @@ import { PostService } from 'src/app/post.service';
   styleUrls: ['./active-posts.component.scss']
 })
 export class ActivePostsComponent {
-  constructor( private postSvc:PostService){}
+  posts:Post[] = this.getPosts()
+  constructor(private postSvc:PostService){}
 
-  getActivePosts():Post[]{
+  getPosts():Post[]{
     this.postSvc.takePosts()
-    return this.postSvc.getActivePosts()
+    return this.postSvc.getPosts()
   }
 }

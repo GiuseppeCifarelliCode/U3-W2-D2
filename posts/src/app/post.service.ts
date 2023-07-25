@@ -22,16 +22,8 @@ export class PostService {
   }
 
   getPosts():Post[]{
+    this.posts = []
     return this.posts
   }
 
-  getActivePosts():Post[]{
-    return this.activePosts = (this.posts.filter(post => post.active = true)
-      )
-  }
-
-  getInactivePosts():Post[]{
-    return this.inactivePosts = (this.posts.filter(post => post.active = false)
-      )
-  }
 }

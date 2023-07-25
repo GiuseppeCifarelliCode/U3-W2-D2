@@ -7,11 +7,13 @@ import { PostService } from 'src/app/post.service';
   templateUrl: './inactive-posts.component.html',
   styleUrls: ['./inactive-posts.component.scss']
 })
+
 export class InactivePostsComponent {
+  posts:Post[] = this.getPosts()
   constructor( private postSvc:PostService){}
 
-  getInactivePosts():Post[]{
+  getPosts():Post[]{
     this.postSvc.takePosts()
-    return this.postSvc.getInactivePosts()
+    return this.postSvc.getPosts()
   }
 }
