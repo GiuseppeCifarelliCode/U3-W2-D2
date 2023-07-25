@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, RouterLink, RouterLinkWithHref } from '@angular/router';
 import { Post } from 'src/app/models/post';
 import { PostService } from 'src/app/post.service';
 
@@ -15,4 +16,5 @@ export class HomeComponent {
     this.postSvc.takePosts()
     return this.postSvc.getPosts()
   }
+
 }
